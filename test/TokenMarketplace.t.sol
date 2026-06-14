@@ -17,6 +17,6 @@ contract TokenMarketplaceTest is Test {
 
         uint256 tokenPrice = tokenMarketplace.TOKEN_PRICE();
 
-        assertEq(tokenPrice, 0);
+        assertEq(tokenPrice, 1 ether);
     }
 }
