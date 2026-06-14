@@ -9,15 +9,14 @@ contract TokenMarketplaceTest is Test {
     TokenMarketplace public tokenMarketplace;
     ERC20Mock public erc20Mock;
 
-
     function testWhetherTokenPriceIsInitialized() public {
-        address owner = makeAddr("owner"); 
+        address owner = makeAddr("owner");
         erc20Mock = new ERC20Mock();
-        
-        tokenMarketplace = new TokenMarketplace(address(erc20Mock),owner);
-      
+
+        tokenMarketplace = new TokenMarketplace(address(erc20Mock), owner);
+
         uint256 tokenPrice = tokenMarketplace.TOKEN_PRICE();
 
-        assertEq(tokenPrice,0);
+        assertEq(tokenPrice, 0);
     }
 }
